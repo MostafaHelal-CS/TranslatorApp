@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Language Translator</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="translation__area">
+            <textarea name="" id="translate__from" placeholder="Enter Text"></textarea>
+            <textarea name="" id="translate__to" placeholder="Translation"></textarea>
+        </div>
+        <div class="translation__tools">
+            <i class="fa-solid fa-volume-high speacker" id="from"></i>
+            <i class="fa-solid fa-paste copy" id="from"></i>
+            <select name="" id="select_language_From">
+            </select>
+            <i class="fa-solid fa-arrow-right-arrow-left exchange"></i>
+            <select name="" id="select_language_to"></select>
+            <i class="fa-solid fa-volume-high speacker" id="to"></i>
+            <i class="fa-solid fa-paste copy" id="to"></i>
+        </div>
+        <button class="translate" id="translate">Translate</button>
+    </div>
+
+    <script src="JS/countries.js"></script>
+    <script src="JS/main.js"></script>
+</body>
+</html>

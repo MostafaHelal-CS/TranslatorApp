@@ -1,0 +1,179 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #5172e7; */
+    background-image: linear-gradient(to right , #08203e , #557c93);
+    background-color: #000;
+}
+
+.container {
+    width: 50%;
+    height: 70vh;
+    background-color: #FFF;
+    border-radius: 5px;
+    padding: 20px;
+    background-image: linear-gradient(to right , #145277 , #83d0cb);
+}
+
+.container .translation__area {
+    width: 100%;
+    display: flex;
+}
+.container .translation__area textarea {
+    width: 50%;
+    height: 50vh;
+    resize: none;
+    padding: 10px;
+    font-size: 1.1rem;
+    color: #FFF;
+    border: none;
+    outline: none;
+    
+}
+.container .translation__area #translate__from {
+    background-image: linear-gradient(to bottom , #145277 , #83d0cb);
+    border-right: 1px solid #83d0cb;
+    box-shadow: 0 0 5px #83d0cb;
+}
+.container .translation__area #translate__to {
+    background-image: linear-gradient(to top , #145277 , #83d0cb);
+    border-left: 1px solid #145277;
+    box-shadow: 0 0 5px #145277;
+}
+
+.container .translation__area textarea::-webkit-input-placeholder {
+    color: #FFF;
+}
+
+.container .translation__area textarea:focus::-webkit-input-placeholder {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+}
+
+.container .translation__area textarea:focus {
+    outline: none;
+}
+
+.container .translation__tools {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-image: linear-gradient(to right , #145277 , #83d0cb);
+    padding: 15px 10px;
+    border-top: 1px solid #83d0cb;
+    border-right: 1px solid #83d0cb;
+    border-bottom: 1px solid #145277;
+    border-left: 1px solid #145277;
+    margin-bottom: 20px;
+}
+
+.container .translation__tools select {
+    width: 35%;
+    height: 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    color: #FFF;
+    background-color: #08203e;
+    background-image: linear-gradient(to top , #145277 , #83d0cb);
+    /* background-image: linear-gradient(to right , #08203e , #557c93); */
+}
+
+.container .translation__tools i {
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+    font-weight: bold;
+}
+
+.container .translation__tools i:hover {
+    color: #08203e;
+}
+
+
+.container button {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #FFF;
+    background-image: linear-gradient(to right , #08203e , #557c93);
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.container button:hover {
+    background-color: #3056e0;
+}
+
+@media(max-width:992px){
+    .container {
+        width: 70%;
+        height: 70vh;
+    }
+    .container .translation__area {
+        flex-direction: column;
+    }
+    .container .translation__area textarea {
+        width: 100%;
+        height: 22vh;
+    }
+}
+
+@media(max-width:768px) {
+    .container {
+        width: 80%;
+        height: 85vh;
+    }
+    .container .translation__area textarea {
+        width: 100%;
+        height: 30vh;
+    }
+    .container .translation__area #translate__from {
+        background-image: linear-gradient(to right , #145277 , #83d0cb);
+        border: none;
+        box-shadow: none;
+        box-shadow: 0 0 10px #83d0cb;
+        border-right: 3px solid #145277;
+    }
+    .container .translation__area #translate__to {
+        background-image: linear-gradient(to left , #145277 , #83d0cb);
+        border: none;
+        box-shadow: none;
+        box-shadow: 0 0 5px #08203e;
+    }
+}
+@media(max-width:576px) {
+    .container {
+        width: 98%;
+        height: 98vh;
+    }
+
+    .container .translation__area textarea {
+        width: 100%;
+        height: 37vh;
+    }
+
+    .container .translation__tools i {
+        font-size: 1rem;
+    }
+    .container .translation__tools select {
+        width: 25%;
+        height: 25px;
+    }
+}
